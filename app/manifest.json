@@ -1,10 +1,10 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Open, Load, Close",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Open a link, wait for it to load, then close it immediately.",
     "permissions": [ "tabs", "contextMenus" ],
     "background": {
-        "scripts": [ "main.js" ]
+        "service_worker": "main.js"
     }
 }
