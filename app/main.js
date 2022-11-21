@@ -11,9 +11,11 @@ function openLoadClose( linkObj ) {
     });
 }
 
-chrome.contextMenus.create({
-    id: "openloadclose",
-    title: "Open, load, and close",
-    contexts: [ 'link' ]
+chrome.runtime.onInstalled.addListener(() => {
+        chrome.contextMenus.create({
+        id: "openloadclose",
+        title: "Open, load, and close",
+        contexts: [ 'link' ]
+    });
 });
 chrome.contextMenus.onClicked.addListener( openLoadClose );
